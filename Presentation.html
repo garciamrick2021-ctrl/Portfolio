@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Présentation - GARCIA M'rick</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <style>
+    /* Modern CSS Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #ffffff;
+      --primary-dark: #2980b9;
+      --secondary: #2c3e50;
+      --light: #ecf0f1;
+      --accent: #e74c3c;
+      --text: #2c3e50;
+      --text-light: #0b0b0b;
+      --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: linear-gradient(to bottom right, #9852a6, #e9ecef);
+      min-height: 100vh;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: #060606;
+      color: white;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 100px auto 50px;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: white;
+      border-radius: 10px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      color: var(--secondary);
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      border-bottom: 3px solid var(--primary);
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+
+    h2 {
+      color: var(--secondary);
+      margin: 25px 0 15px;
+      font-size: 1.8rem;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: var(--text-light);
+      font-size: 1.1rem;
+    }
+
+    /* Profile Section */
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .profile-img {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .profile-img img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-content {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .skill {
+      background: var(--light);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 500;
+      color: var(--secondary);
+    }
+
+    /* Projects Section */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      background: var(--light);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-img {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .project-card:hover .project-img img {
+      transform: scale(1.05);
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-title {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: var(--secondary);
+    }
+
+    .project-desc {
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+
+    .project-link {
+      display: inline-block;
+      background: var(--primary);
+      color: rgb(236, 229, 229);
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .project-link:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--secondary);
+      color: rgb(98, 86, 86);
+      text-align: center;
+      padding: 30px 0;
+      margin-top: 50px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .social-links a {
+      color: rgb(7, 7, 7);
+      font-size: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .profile {
+        flex-direction: column;
+      }
+
+      .profile-img,
+      .profile-content {
+        min-width: 100%;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Port<span>Folio</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="Presentation.html" style="color: var(--primary);">Présentation</a></li>
+        <li><a href="Projet.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="section">
+      <h1>Présentation</h1>
+      <div class="profile">
+        <div class="profile-img">
+          <img
+            src="classique.png"
+            alt="Portrait professionnel de GARCIA M'rick"
+          />
+        </div>
+        <div class="profile-content">
+          <h2>GARCIA M'rick</h2>
+          <p>
+            Motivé, curieux et organisé. J'aime apprendre de nouvelles choses et améliorer mes compétences.
+            Je sais travailler en équipe mais aussi être autonome quand il le faut. Mon objectif est de pouvoir avoir plus de connaissances et de compétences.
+          </p>
+          <p>
+            Avec un BTS en Services Informatiques aux Organisations, j'ai travaillé sur divers projets.
+            Mon objectif est de créer des expériences utilisateur qui allient esthétique et fonctionnalité.
+          </p>
+
+          <h2>Compétences</h2>
+          <div class="skills">
+            <span class="skill">HTML/CSS</span>
+            <span class="skill">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h1>Projets</h1>
+      <div class="projects">
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="Lettre de motiv.png"
+              alt="Lettre de motivation"
+            />
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Lettre de Motivation</h3>
+            <p class="project-desc"></p>
+            <a href="file:///C:/Users/garci/Downloads/PORTFOLIO/LM_GarciaM'rick.pdf" class="project-link" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">
+            <img
+              src="logo cv.png"
+              alt="CV"
+            />
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">CV</h3>
+            <p class="project-desc">
+            </p>
+            <a href="file:///C:/Users/garci/Downloads/PORTFOLIO/CV_GarciaM'rick (1).pdf (1).pdf" class="project-link" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 GARCIA M'rick. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projets - Portfolio GARCIA M'rick</title>
+  <link rel="icon" href="" />
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #9852a6;
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: #eee;
+      text-decoration: none;
+      margin-left: 1.25rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover,
+    .navbar a:focus {
+      color: #cfd5da;
+      outline: none;
+    }
+
+    .navbar .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #d5dade;
+    }
+
+    /* Container for page content */
+    main {
+      max-width: 1000px;
+      margin: 6rem auto 2rem; /* margin top to avoid navbar */
+      padding: 0 1rem;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h2 {
+      border-bottom: 3px solid #0a0a0a;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    /* Responsive nav for small screens */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .navbar a {
+        margin: 0.5rem 0 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html#home" class="brand">Portfolio</a>
+    <div>
+      <a href="index.html">Accueil</a>
+      <a href="Presentation.html">Présentation</a>
+      <a href="Projet.html">Projet</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <header role="banner">
+      <h2>Mes Projets</h2>
+      <!-- Add your projects here -->
+    </header>
+    <p style="text-align:center; color:#ddd; font-style: italic;">
+      Cette page est en construction. Les projets seront bientôt ajoutés ici.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2024 GARCIA M'rick. Tous droits réservés.
+  </footer>
+</body>
+</html>
