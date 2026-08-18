@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio — BTS SIO</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ==================== MENU DU HAUT ==================== -->
+  <header>
+    <div class="conteneur en-tete">
+
+      <p class="logo">Portfolio</p>
+
+      <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- ==================== CONTENU PRINCIPAL ==================== -->
+  <main class="conteneur">
+
+
+    <!-- ---------- SECTION ACCUEIL (sur 2 colonnes côte à côte) ---------- -->
+    <!-- id="accueil" permet au menu de venir ici -->
+    <section id="accueil" class="accueil">
+
+      <!-- Colonne de gauche : texte principal -->
+      <div class="accueil-gauche">
+        <p class="etiquette">BTS SIO</p>
+
+        <!-- MODIFIE ICI : mets ton prénom et nom -->
+        <h1>GARCIA M'Rick</h1>
+
+        <!-- MODIFIE ICI : une phrase qui te présente -->
+        <p class="texte-accueil">
+          Étudiant en informatique. Voici les projets que j'ai réalisés durant ma formation.
+        </p>
+
+        <!-- Bouton qui descend vers la section projets -->
+        <a href="#projets" class="bouton">Voir mes projets</a>
+      </div>
+
+      <!-- Colonne de droite : petites infos (tu peux modifier le texte) -->
+      <div class="accueil-droite">
+        <div class="petite-carte">
+          <strong>Formation</strong>
+          <span>BTS SIO</span>
+        </div>
+        <div class="petite-carte">
+          <strong>Option</strong>
+          <span>SLAM</span>
+        </div>
+        <div class="petite-carte">
+          <strong>Année</strong>
+          <span>2025–2027</span>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ---------- SECTION À PROPOS (texte à gauche, infos à droite) ---------- -->
+    <section id="apropos" class="bloc">
+
+      <div class="ligne">
+
+        <div class="colonne">
+          <h2>À propos de moi</h2>
+
+          <!-- MODIFIE ICI : parle de toi, ton lycée, ce que tu apprends -->
+          <p>
+            Étudiant en BTS SIO au lycée Marguerite Jauzelon.
+            J'apprends le développement, les réseaux et les bases de données.
+          </p>
+        </div>
+
+        <ul class="liste-infos">
+          <li><strong>Formation</strong> BTS SIO</li>
+          <li><strong>Option</strong> SLAM</li>
+          <li><strong>Année</strong> 2025–2027</li>
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- ---------- SECTION PROJETS ---------- -->
+    <section id="projets" class="bloc">
+
+      <h2>Mes projets de l'année</h2>
+      <p class="sous-titre">Les travaux que j'ai réalisés en cours.</p>
+
+      <!--
+        Chaque projet est une "carte" (class="carte-projet").
+        Pour AJOUTER un projet : copie tout un bloc <article>...</article>
+        et change la date, le titre, le texte et les outils.
+      -->
+      <div class="liste-projets">
+
+        <!-- ===== PROJET 1 — modifie ou supprime ===== -->
+        <article class="carte-projet">
+          <p class="date-projet">1er année BTS</p>
+          <h3><a href="https://example.com/projet1" target="_blank">AP - Refonte d'un Site Web</a></h3>
+          <p>
+            .
+          </p>
+          <p class="outils-projet"></p>
+        </article>
+
+        <!-- ===== PROJET 2 — modifie ou supprime ===== -->
+        <article class="carte-projet">
+          <p class="date-projet">1er année BTS</p>
+          <h3><a href="https://example.com/projet2" target="_blank">AP - Gestion d'un parc informatique</a></h3>
+          <p>
+            .
+          </p>
+          <p class="outils-projet"></p>
+        </article>
+
+        <!-- ===== PROJET 3 — modifie ou supprime ===== -->
+        <article class="carte-projet">
+          <p class="date-projet">1er année BTS</p>
+          <h3><a href="https://example.com/projet3" target="_blank">AP - Gestion de la présence en ligne de la MS2R</a></h3>
+          <p>
+            .
+          </p>
+          <p class="outils-projet"></p>
+        </article>
+
+        <!-- ===== PROJET 4 — modifie ou supprime ===== -->
+        <article class="carte-projet">
+          <p class="date-projet">1er année BTS</p>
+          <h3><a href="https://example.com/projet4" target="_blank">AP - Environnement Web de la MS2R</a></h3>
+          <p>
+            .
+          </p>
+          <p class="outils-projet"></p>
+        </article>
+
+
+        <!-- ===== PROJET 5 — modifie ou supprime ===== -->
+        <article class="carte-projet">
+          <p class="date-projet">Mai - Juin 2026</p>
+          <h3><a href="stage2026.html" target="_blank">Stage 1er année</a></h3>
+          <p>
+            .
+          </p>
+          <p class="outils-projet"></p>
+        </article>
+
+        <!--
+          ===== POUR AJOUTER UN NOUVEAU PROJET, COPIE CE BLOC =====
+
+        <article class="carte-projet">
+          <p class="date-projet">Mois Année</p>
+          <h3>Titre de ton projet</h3>
+          <p>
+            Décris ce que tu as fait en 2 ou 3 phrases simples.
+          </p>
+          <p class="outils-projet">Outil 1 · Outil 2</p>
+        </article>
+
+        -->
+
+      </div>
+    </section>
+
+
+    <!-- ---------- SECTION CONTACT (sur une ligne) ---------- -->
+    <section id="contact" class="bloc contact-bloc">
+
+      <h2>Contact</h2>
+
+              <article class="carte-projet">
+          <h3><a href="cv.png" target="_blank">Curriculum Vitae</a></h3>
+          <p>
+        </article>
+
+        <article class="carte-projet">
+          <h3><a href="lm.png" target="_blank">Lettre de Motivation</a></h3>
+          <p>
+        </article>
+
+        
+
+      <!-- MODIFIE ICI : remplace par ton vraie adresse email -->
+      <p class="email">
+        <a href="mailto:garciamrick00@gmail.com">garciamrick00@gmail.com</a>
+      </p>
+      <!--
+        mailto: ouvre la boîte mail de la personne qui clique.
+        Le texte visible et l'adresse dans href doivent être les mêmes.
+      -->
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ==================== PIED DE PAGE ==================== -->
+  <footer>
+    <div class="conteneur pied-de-page">
+      <!-- MODIFIE ICI : ton nom et l'année -->
+      <p>© 2026 GARCIA M'Rick — Portfolio BTS SIO</p>
+      <a href="#accueil">Retour en haut</a>
+    </div>
+  </footer>
+
+
+</body>
+</html>
