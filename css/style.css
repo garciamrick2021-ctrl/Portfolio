@@ -1,0 +1,385 @@
+/*
+  ============================================================
+  FICHIER CSS — Les styles du portfolio
+  ============================================================
+
+  MISE EN PAGE HORIZONTALE :
+  Le site utilise toute la largeur de l'écran.
+  Les éléments sont placés CÔTE À CÔTE quand il y a de la place.
+
+  Outil principal utilisé : display: flex
+  → permet de mettre des blocs en ligne (horizontalement)
+
+  Et : display: grid
+  → permet de faire une grille (ex: 3 projets par ligne)
+  ============================================================
+*/
+
+
+/* --- Réglages de base --- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* --- Conteneur : plus large pour utiliser l'écran --- */
+
+.conteneur {
+  max-width: 1200px;       /* plus large qu'avant (1200px au lieu de 800px) */
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+
+/* --- En-tête --- */
+
+header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 16px 0;
+}
+
+.en-tete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+
+/* --- Accueil : 2 colonnes côte à côte --- */
+
+.accueil {
+  display: flex;              /* met les enfants en ligne */
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  padding: 50px 0 40px;
+}
+
+.accueil-gauche {
+  flex: 1;                    /* prend la place disponible à gauche */
+}
+
+.accueil-droite {
+  display: flex;              /* les 3 petites cartes en ligne */
+  gap: 16px;
+  flex-shrink: 0;             /* ne rétrécit pas trop */
+}
+
+.petite-carte {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px 24px;
+  text-align: center;
+  min-width: 120px;
+}
+
+.petite-carte strong {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.petite-carte span {
+  font-size: 1rem;
+  color: #1e293b;
+  font-weight: bold;
+}
+
+.etiquette {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.accueil h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.texte-accueil {
+  color: #64748b;
+  max-width: 520px;
+  margin-bottom: 24px;
+}
+
+.bouton {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.bouton:hover {
+  background: #1d4ed8;
+  text-decoration: none;
+}
+
+
+/* --- Ligne horizontale (utilisée dans "À propos") --- */
+
+.ligne {
+  display: flex;              /* texte à gauche, infos à droite */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.colonne {
+  flex: 1;
+}
+
+
+/* --- Blocs blancs --- */
+
+.bloc {
+  background: white;
+  border-radius: 12px;
+  padding: 32px 40px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.bloc h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.sous-titre {
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+
+/* --- Infos à propos : 3 cartes en ligne --- */
+
+.liste-infos {
+  list-style: none;
+  display: flex;              /* les 3 infos côte à côte */
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.liste-infos li {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px 24px;
+  text-align: center;
+  min-width: 130px;
+  color: #555;
+}
+
+.liste-infos strong {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+
+/* --- Projets : grille de 3 colonnes --- */
+
+.liste-projets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 projets par ligne */
+  gap: 20px;
+}
+
+.carte-projet {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.date-projet {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.carte-projet h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.carte-projet p {
+  color: #555;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.outils-projet {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+
+/* --- Contact : titre et email sur la même ligne --- */
+
+.contact-bloc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-bloc h2 {
+  margin-bottom: 0;
+}
+
+.email {
+  font-size: 1.1rem;
+}
+
+
+/* --- Pied de page : texte à gauche, lien à droite --- */
+
+.pied-de-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  padding: 24px 0 40px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #94a3b8;
+}
+
+footer a:hover {
+  color: #2563eb;
+}
+
+
+/* --- Écran moyen (tablette) : 2 projets par ligne --- */
+
+@media (max-width: 900px) {
+  .liste-projets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .accueil-droite {
+    flex-wrap: wrap;
+  }
+
+  .liste-infos {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* --- Petit écran (téléphone) : tout repasse en vertical --- */
+
+@media (max-width: 700px) {
+  .conteneur {
+    padding: 0 20px;
+  }
+
+  .accueil {
+    flex-direction: column;   /* colonnes → empilées verticalement */
+    align-items: flex-start;
+  }
+
+  .accueil-droite {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .ligne {
+    flex-direction: column;
+  }
+
+  .liste-infos {
+    width: 100%;
+  }
+
+  .liste-infos li {
+    flex: 1;
+  }
+
+  .liste-projets {
+    grid-template-columns: 1fr;  /* 1 seul projet par ligne */
+  }
+
+  .contact-bloc {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .accueil h1 {
+    font-size: 1.8rem;
+  }
+
+  .bloc {
+    padding: 24px 20px;
+  }
+
+  nav {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+}
